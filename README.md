@@ -17,3 +17,5 @@ Install:
 3. sudo python setup.py
 4. Anwser questions (this will setup configurations for later...if you are un-easy about it - then just edit arp_mon.py yourself)
 5. Make sure you add this program to your crontab -- else it will not run! 
+  a.'sudo crontab -e -u root'
+  b. then add this entry for every 5 minutes: */5 * * * * /absolute/path/to/arp_mon.py
