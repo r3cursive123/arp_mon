@@ -38,7 +38,7 @@ aggressive = 0
 
 
 # Set frequency of scan using 'sudo crontab -e -u root'
-# Then add this entry for every 5 minutes: */5 * * * * /absolute/path/to/arp_mon_notifier.py
+# Then add this entry for every 5 minutes: */5 * * * * /absolute/path/to/arp_mon.py
 
 
 # Check if we are running as root
