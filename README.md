@@ -5,6 +5,8 @@ If MAC address should not belong then an email notification is generated.
 If you are in aggressive mode,  the program will try to invoke 'nmap' to get more detail and email this as an attachment - 
 otherwise - it will just send an email with MAC address and manufacturer.
 
+Security Notice: Please put this program in a directory that only root has access to. If you are paranoid: 'sudo chown root arp_mon.py; sudo chmod 700 arp_mon.py;'
+
 Dependencies: arp-scan, nmap
 
 Should be run on linux or raspberry pi
