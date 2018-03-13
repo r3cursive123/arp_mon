@@ -7,7 +7,7 @@ otherwise - it will just send an email with MAC address and manufacturer.
 
 Security Notice: Please put this program in a directory that only root has access to. If you are paranoid: 'sudo chown root arp_mon.py; sudo chmod 700 arp_mon.py;'
 
-Dependencies: arp-scan, nmap
+Dependencies: arp-scan, nmap, python 2.7
 
 Should be run on linux or raspberry pi
 
