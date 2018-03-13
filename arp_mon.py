@@ -21,7 +21,7 @@ import os
 #              If MAC is not in our list we will send an email alert to the  |
 #              user with MAC and company                                     |
 #              Set to aggressive to enable an nmap scan of MAC address       |
-#              Aggressive mode will save a file 'report1.txt' to the local   |
+#              Aggressive mode will save a file 'report.txt' to the local   |
 #              directory and email it as an attachment                       |
 # ****************************************************************************
 
@@ -33,7 +33,8 @@ sport = 'YOUR_SPORT'
 
 
 # Is set to 0 - you will be notified of mac and vendor only
-# If set to 1 - an nmap scan will be done on the target MAC address and a report sent as an attachment
+# If set to 1 - an nmap scan will be done on the target MAC address and a 
+sent as an attachment
 aggressive = 0
 
 
@@ -87,8 +88,8 @@ def send_alert_aggressive(mac,result):
 
     msg.attach(MIMEText(body, 'plain'))
 
-    filename = "report1.txt"
-    attachment = open("report1.txt", "rb")
+    filename = "report.txt"
+    attachment = open("report.txt", "rb")
 
     part = MIMEBase('application', 'octet-stream')
     part.set_payload((attachment).read())
@@ -128,7 +129,7 @@ while mac != '':
             command = ['sudo arp-scan --localnet | grep '+mac]
             scanner = subprocess.Popen(command,shell=True,stdout=subprocess.PIPE)
             ip = scanner.stdout.readline()[0:12].rstrip()
-            os.system('nmap -A ' + ip + ' -oN report1.txt >> /dev/null')
+            os.system('nmap -A ' + ip + ' -oN report.txt >> /dev/null')
             send_alert_aggressive(mac,result)
             print('Alert Sent Aggressive!')
             mac = arp.stdout.readline()
