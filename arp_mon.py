@@ -33,8 +33,8 @@ sport = 'YOUR_SPORT'
 
 
 # Is set to 0 - you will be notified of mac and vendor only
-# If set to 1 - an nmap scan will be done on the target MAC address and a 
-sent as an attachment
+# If set to 1 - an nmap scan will be done on the target MAC address and a report
+# sent as an attachment
 aggressive = 0
 
 
